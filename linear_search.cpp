@@ -7,10 +7,8 @@ using namespace std;
     int linearSearch(int arr[],int n,int key){
         for (int i = 0; i < n; i++)
         {
-            /* code */
             if (arr[i] == key)
             {
-                /* code */
                 cout <<"\nIndex = ";
                 return i;
                 cout <<endl;
@@ -30,7 +28,6 @@ int main ()
     cout<<"Enter the elements of the array :-\n";
     for (int i = 0; i < n; i++)
     {
-        /* code */
         cin >>arr[i];
     }
     cout <<"Enter the element of array that find in the array :- ";

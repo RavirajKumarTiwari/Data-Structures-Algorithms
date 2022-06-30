@@ -1,0 +1,1 @@
+{"name":"Local: min_max_array","url":"c:\\Users\\raviraj kumar\\OneDrive\\Desktop\\Apnacollege\\min_max_array.cpp","tests":[{"id":1656561923133,"input":"5\n1 2 3 4 5","output":"Max = 5\nMin = 1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\raviraj kumar\\OneDrive\\Desktop\\Apnacollege\\min_max_array.cpp","group":"local","local":true}
