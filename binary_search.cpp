@@ -1,14 +1,14 @@
 
 //DATE:- 10-08-2021
-//WAP to binary search
+//WAP to  search element in sorted array 
 
 #include<iostream>
 using namespace std;
-int binarySearch(int arr[],int n,int key){//function
-    int s = 0,e = n;
-    while (s <= e)
+int Search(int arr[],int n,int key){//function
+    int s = 0,e = n-1;// n = size of array 
+    while (s <= e)// where s = starting index and e = last index of array
     {
-        int mid = (s+e)/2;
+        int mid = (s+e)/2;// finding middle index of an array
         if (arr[mid] == key){
             cout<<"index = ";
             return mid;
@@ -39,6 +39,6 @@ int main()
     cout <<"Enter the element that find in the array :- ";
     int key;
     cin>>key;
-    cout <<binarySearch(arr,n,key)<<endl;
+    cout <<Search(arr,n,key)<<endl;
     return 0;
 }

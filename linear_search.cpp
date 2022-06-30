@@ -15,7 +15,7 @@ using namespace std;
             }
             
         }
-        cout <<"not found!";
+        cout <<"not found!\n";
         return -1;
         
     }
@@ -35,5 +35,6 @@ int main ()
     cin >>key;
     cout<<linearSearch(arr,n,key)<<endl;
     return 0;
+    
     
 }
