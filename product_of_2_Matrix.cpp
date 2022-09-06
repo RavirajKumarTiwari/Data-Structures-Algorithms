@@ -47,7 +47,7 @@ int row1,column1,second[10][10] = {0};
             }
         cout <<"\n";
         }
- 
+
     if(column!=row1)
         cout <<"\n_______ Can not multiply _______";
     else
