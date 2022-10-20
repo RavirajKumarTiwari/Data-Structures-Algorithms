@@ -1,5 +1,7 @@
 //Count Ways To Reach The N - th Stairs (Codestudio) by coding Ninja
 
+// link:- https://www.codingninjas.com/codestudio/problems/count-ways-to-reach-nth-stairs_798650?leftPanelTab=0
+
 //Question:-
 
 // You are climbing a staircase.It takes n steps to reach the top.Each time you can either climb 1 or 2 steps.In how many distinct ways can you climb to the top?
