@@ -23,7 +23,7 @@ int binarySearch(vector <int> arr, int start, int end, int key)
         return binarySearch(arr, mid+1, end, key);
     }
     else{
-        return binarySearch(arr, end, mid-1, key);
+        return binarySearch(arr, start, mid-1, key);
     }
 }
 
