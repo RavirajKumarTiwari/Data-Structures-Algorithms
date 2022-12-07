@@ -19,6 +19,7 @@
     "commandCenter.border": "#e7e7e799"
   },
   "files.associations": {
-    "iostream": "cpp"
+    "iostream": "cpp",
+    "vector": "cpp"
   }
 }
