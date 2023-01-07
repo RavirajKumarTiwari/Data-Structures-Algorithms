@@ -25,6 +25,7 @@ int binarySearch(vector <int> arr, int start, int end, int key)
     else{
         return binarySearch(arr, start, mid-1, key);
     }
+    mid = start + (end - start) / 2;
 }
 
 int main()
