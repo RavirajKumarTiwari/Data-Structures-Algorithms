@@ -10,8 +10,8 @@ int main()
     for (i = n;i >= 1;i--)
     {
         for (j = n;j >= i;j--){
-          //cout <<"*";
-            cout <<num <<" ";
+          cout <<"*";5
+            // cout <<num <<" ";
         num++;
         }
         cout <<"\n";
