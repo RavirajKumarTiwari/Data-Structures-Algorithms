@@ -1,3 +1,9 @@
 {
-    "editor.fontSize": 15
+  "workbench.colorCustomizations": {
+    "activityBar.activeBorder": "#9f006a"
+  },
+  "files.associations": {
+    "iostream": "cpp",
+    "vector": "cpp"
+  }
 }

@@ -5,7 +5,7 @@
 #include<iostream>
 using namespace std;
 
-int selectionSort(int n, int arr[])
+int selectionSort(int arr[], int n)
 {
     for (int i = 0; i < n-1; i++)
     {
@@ -13,9 +13,10 @@ int selectionSort(int n, int arr[])
         {
             if (arr[j] < arr[i])
             {
-                int temp = arr[j];
-                arr[j] = arr[i];
-                arr[i] = temp;
+                // int temp = arr[j];
+                // arr[j] = arr[i];
+                // arr[i] = temp;
+                swap(arr[j], arr[i]);
             }
             
         }
@@ -34,10 +35,10 @@ int main ()
     int n;
     cout <<"Enter the size of the array :- ";
     cin>>n;
-    int arr[n];
+    int arr[20];
     cout <<"Enter the elements of the array :-\n";
     for (int i = 0; i < n; i++)
         cin>>arr[i];
 
-    selectionSort(n, arr);
+    selectionSort(arr, n);
 }
