@@ -1,2 +1,1 @@
-
-    // cout << node1->next << endl;
+&& i!=j
