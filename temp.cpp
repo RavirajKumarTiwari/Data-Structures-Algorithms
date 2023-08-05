@@ -1,44 +1,52 @@
+//Singly linked list
 #include <iostream>
 using namespace std;
 
-long long int sumOrProduct(long long int n, long long int q)
-{
-    // Write your code here.
-    long long sum = 0, mul = 1;
+struct Node{
+    int data;
+    Node* next;
+};
 
-    long long max = 0;
-    long long min = 0;
-    if (n > q)
-    {
-        max = n;
-        min = q;
-    }
-    else
-    {
-        max = n;
-        min = q;
-    }
+Node* head = NULL;
 
-    cout<<max<<"\n"<<min<<"\n";
+void insert(int data){
+    Node* temp = new Node();
+    temp->data = data;
+    temp->next = NULL;
 
-    for (min; min <= max; min++)
-    {
-        sum = sum + min;
-        mul = mul * min;
+    if(head == NULL){
+        head = temp;
     }
-    cout<< sum<<"\n"<< mul;
-    return;
+    else{
+        Node* temp1 = head;
+        while(temp1->next != NULL){
+            temp1 = temp1->next;
+        }
+        temp1->next = temp;
+    }
 }
 
-int main ()
-{
-    int n, q;
+void print(){
+    Node* temp = head;
+    while(temp != NULL){
+        cout<< temp->data << " ";
+        temp = temp->next;
+    }
+    cout<< endl;
+}
 
-    cout<<"Enter the value of n: ";
-    cin>>n;
+Node* reverse(int k){
 
-    cout<<"Enter the value of q: ";
-    cin>>q;
+}
 
-    cout<<sumOrProduct(n, q);
+int main(){
+    insert(1);
+    insert(2);
+    insert(3);
+    insert(4);
+    insert(5);
+    print();
+    Node* ans = reverse(2);
+    // print();
+    return 0;
 }

@@ -25,19 +25,19 @@ class Node {
     }
 };
 
-void insertNode(Node* &tail, int element, int d){
+void insertNode(Node* &head, int element, int d){
     
     // Empty List
-    if(tail == NULL){
+    if(head == NULL){
         Node* newNode = new Node(d);
-        tail = newNode;
+        head = newNode;
         newNode->next = newNode;
     }
 
     // Non Empty List
     // assuming that the element is present in the list
     else{
-        Node* curr = tail;
+        Node* curr = head;
 
         // check if the element is present in the list or not
         while(curr->data != element){
@@ -50,44 +50,121 @@ void insertNode(Node* &tail, int element, int d){
     }
 }
 
-void print(Node* tail){
-    Node* temp = tail;
+void print(Node* head){
+    Node* temp = head;
 
     do{
-        cout << tail->data << " ";
-        tail = tail->next;
+        cout << head->data << " ";
+        head = head->next;
     }
-    while(tail != temp);
+    while(head != temp);
     cout << endl;
 }
 
-void deleteNode()
+void deleteHeadNode(Node* &head){
+    if(head == NULL){
+        return;
+    }
+    Node* temp = head;
+    Node* tail = head;
+    while(tail->next != head){
+        tail = tail->next;
+    }
+    head = head->next;
+    tail->next = head;
+    free(temp);
+}
+void deleteTailNode(Node* &head){
+    if(head == NULL){
+        return;
+    }
+    Node* tail = head;
+    while(tail->next->next != head){
+        tail = tail->next;
+    }
+    // here tail is representing the second last node
+    Node* temp = temp->next;
+    tail->next = head;
+    free(temp);
+}
+
+void deleteK_th_Node(Node* &head, int position){
+
+    if(position == 1){
+        deleteHeadNode(head);
+        return;
+    }
+    Node* curr = head;
+    Node* prev = NULL;
+
+    int count;
+    for(count = 1; count < position; count++){
+        prev = curr;
+        curr = curr->next;
+    }
+    // cout<<"curr->data"<< curr->data << endl;
+    prev->next = curr->next;
+    free(curr);
+}
+
+bool isCircularList(Node* head){
+    if(head == NULL){
+        return true;
+    }
+
+    Node* temp = head->next;
+    while(temp != NULL && temp != head){
+        temp = temp->next;
+    }
+    if(temp == head){
+        return true;
+    }
+    return false;
+}
 
 int main()
 {
-    Node* tail = NULL;
+    Node* head = NULL;
 
     // inserting in empty list
-    insertNode(tail, 5, 3);
-    print(tail);
+    insertNode(head, 5, 3);
+    print(head);
 
-    insertNode(tail, 3, 5);
-    print(tail);
+    insertNode(head, 3, 5);
+    print(head);
 
-    insertNode(tail, 5, 7);
-    print(tail);
+    insertNode(head, 5, 7);
+    print(head);
 
-    insertNode(tail, 7, 9);
-    print(tail);
+    insertNode(head, 7, 9);
+    print(head);
 
-    insertNode(tail, 9, 11);
-    print(tail);
+    insertNode(head, 9, 11);
+    print(head);
 
-    insertNode(tail, 7, 20);
-    print(tail);
+    insertNode(head, 7, 20);
+    print(head);
 
-    insertNode(tail, 3, 15);
-    print(tail);
+    insertNode(head, 3, 15);
+    print(head);
+
+    // deleteHeadNode(head);
+    // print(head);
+
+    // deleteTailNode(head);
+    // print(head);
+
+    deleteK_th_Node(head, 1);
+    print(head);
+
+    if(isCircularList(head)){
+        cout << "Yes, it is a circular list" << endl;
+    }
+    else{
+        cout << "No, it is not a circular list" << endl;
+    }
+
+    cout<<"head->data"<< head->data << endl;
 
     return 0;
 }

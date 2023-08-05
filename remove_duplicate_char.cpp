@@ -25,23 +25,4 @@ int main(){
     removeDuplicates(s,s.size());
 }
 
-// int removeDuplicates(string &s,int n){
-//     int k=0;
-//     set<int> ans;
-//     for(int i=0;i<n;i++){
-//         ans.insert(s[i]);   // Inserting every element into the set
-//     }
-//     for(auto x:ans){
-//         s[k]=x;             // Modifying the first k characters of the string 
-//         k++;                // beacuse every character x in the set is unique
-//     }
-//     return k;               // Return k, the total number of unique characters in the string
-// }
-
-// int main(){
-//     string s="aaabaababbccbccd";
-//     int k = removeDuplicates(s,s.size());
-//     for(int i=0;i<k;i++)
-//         cout<<s[i];
-// }
 
