@@ -8,6 +8,7 @@ void merge(int *array, int start, int end)
     int len1 = mid - start + 1;
     int len2 = end - mid;
 
+    // create 2 array
     int *first = new int[len1];
     int *second = new int[len2];
 
@@ -58,7 +59,7 @@ void mergeSort(int *array, int start, int end)
     {
         return;
     }
-int mid = (start + end) / 2;
+    int mid = (start + end) / 2;
 
     // sorting the left part of array
     mergeSort(array, start, mid);
